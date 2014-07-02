@@ -83,7 +83,7 @@ static const int GRID_COLUMNS = 10;
     //update the generation so the label's text will display the correct generation
     _generation++;
 }
-- (int)countNeighbors
+- (void)countNeighbors
 {
     // iterate through the rows
     // note that NSArray has a method 'count' that will return the number of elements in the array
@@ -134,4 +134,12 @@ static const int GRID_COLUMNS = 10;
     }
     return isIndexValid;
 }
+- (void)updateCreatures
+{
+    
+}
+
+
+
+
 @end
