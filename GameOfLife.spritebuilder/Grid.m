@@ -9,6 +9,8 @@ static const int GRID_COLUMNS = 10;
     NSMutableArray *_gridArray;
     float _cellWidth;
     float _cellHeight;
+    int _row;
+    int _column;
 }
 - (void)onEnter
 {
@@ -64,9 +66,9 @@ static const int GRID_COLUMNS = 10;
     creature.isAlive = !creature.isAlive;
 }
 - (Creature *)creatureForTouchPosition:(CGPoint)touchPosition
-{   row = touchPosition.y/_cellHeight;
-    column = touchPosition.x/_cellWidth;
-    return _gridArray[pow][column]
+{   _row = touchPosition.y/_cellHeight;
+    _column = touchPosition.x/_cellWidth;
+    return _gridArray[_row][_column];
     //get the row and column that was touched, return the Creature inside the corresponding cell
 }
 
