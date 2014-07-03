@@ -12,7 +12,7 @@
 @property (nonatomic, assign) int totalAlive;
 @property (nonatomic, assign) int generation;
 - (void)evolveStep;
-//- (void) countNeighbors;
+- (void) countNeighbors;
 - (void) updateCreatures;
 @property (nonatomic, assign) BOOL isIndexValidForX;
 @property (nonatomic, assign) BOOL isIndexValidForY;
