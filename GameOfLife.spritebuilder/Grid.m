@@ -159,7 +159,7 @@ static const int GRID_COLUMNS = 10;
     {
     // iterate through all the columns for a given row
     for (int j = 0; j < [_gridArray[i] count]; j++)
-    { Creature *currentCreature = _gridArray[i][j];
+    
         
         
         
@@ -170,7 +170,7 @@ static const int GRID_COLUMNS = 10;
         {
             // go through the column to the left of the current cell, the column the cell is in, and the column to the right of the current cell
             for (int y = (j-1); y <= (j+1); y++)
-
+            { Creature *currentCreature = _gridArray[i][j];
                 
         
         
