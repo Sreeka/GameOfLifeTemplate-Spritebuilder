@@ -121,28 +121,6 @@ static const int GRID_COLUMNS = 10;
                             currentCreature.livingNeighbors += 1;
                             
                             
-                            for (int i = 0; i < [_gridArray count]; i++)
-                            {
-                            // iterate through all the columns for a given row
-                                for (int j = 0; j < [_gridArray[i] count]; j++)
-                            
-                            
-                            
-                            
-                            // now examine every cell around the current one
-                            
-                            // go through the row on top of the current cell, the row the cell is in, and the row past the current cell
-                                  for (int x = (i-1); x <= (i+1); x++)
-                            //    {
-                            // go through the column to the left of the current cell, the column the cell is in, and the column to the right of the current cell
-                                  for (int y = (j-1); y <= (j+1); y++)
-                            { Creature *currentCreature = _gridArray[i][j];
-                            
-                            
-                            
-                            
-                            
-                            
                             if (currentCreature.livingNeighbors == 3) {
                                                currentCreature.isAlive = TRUE;
                                               numAlive++;
@@ -161,8 +139,6 @@ static const int GRID_COLUMNS = 10;
       
             }
             }
-   }
-    }
     
     _totalAlive = numAlive;
 
