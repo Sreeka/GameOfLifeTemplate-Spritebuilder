@@ -80,7 +80,7 @@ static const int GRID_COLUMNS = 10;
     [self countNeighbors];
     
     //update each Creature's state
-  //  [self updateCreatures];
+   [self updateCreatures];
     
     //update the generation so the label's text will display the correct generation
     _generation++;
@@ -130,8 +130,7 @@ static const int GRID_COLUMNS = 10;
                                   }
                                 if (currentCreature.livingNeighbors >= 4) {
                                                                 currentCreature.isAlive = FALSE;
-                                   }
-                            
+                            }
                         }
                     }
               }
@@ -153,28 +152,28 @@ static const int GRID_COLUMNS = 10;
     return isIndexValid;
 }
 //- (void)updateCreatures
-
-//{
-              //              if (currentCreature.livingNeighbors == 3) {
-                //                currentCreature.isAlive = TRUE;
-                  //              numAlive++;
-                    //        }
-                      //      if (currentCreature.livingNeighbors <= 1){
-                        //        currentCreature.isAlive = FALSE;
-                          //  }
-                            //if (currentCreature.livingNeighbors >= 4) {
-//                                currentCreature.isAlive = FALSE;
-  //                          }
 //
-  //                      }
+//{
+//                            if (currentCreature.livingNeighbors == 3) {
+//                                currentCreature.isAlive = TRUE;
+//                                numAlive++;
+//                            }
+//                            if (currentCreature.livingNeighbors <= 1){
+//                                currentCreature.isAlive = FALSE;
+//                            }
+//                            if (currentCreature.livingNeighbors >= 4) {
+//                                currentCreature.isAlive = FALSE;
+//                            }
+//
+//                        }
 //_totalAlive = numAlive;
 //}
-//-(void)updateCreatures
-//{ //int numAlive = 0;
-    //for (int i = 0; i < [_gridArray count]; i++)
-    //{
-    // iterate through all the columns for a given row
-//    for (int j = 0; j < [_gridArray[i] count]; j++)
+-(void)updateCreatures
+{ int numAlive = 0;
+    for (int i = 0; i < [_gridArray count]; i++)
+    {
+     //iterate through all the columns for a given row
+    for (int j = 0; j < [_gridArray[i] count]; j++)
     
         
         
@@ -182,23 +181,24 @@ static const int GRID_COLUMNS = 10;
         // now examine every cell around the current one
         
         // go through the row on top of the current cell, the row the cell is in, and the row past the current cell
-  //      for (int x = (i-1); x <= (i+1); x++)
-    //    {
-            // go through the column to the left of the current cell, the column the cell is in, and the column to the right of the current cell
-      //      for (int y = (j-1); y <= (j+1); y++)
-        //    { Creature *currentCreature = _gridArray[i][j];
+        for (int x = (i-1); x <= (i+1); x++)
+        {
+            // go through the column to the left of the current cell, the column the cell is in, and the
+            //column to the right of the current cell
+            for (int y = (j-1); y <= (j+1); y++)
+            { Creature *currentCreature = _gridArray[i][j];
                 
         
         
         
-  //      if (currentCreature.livingNeighbors==3) { currentCreature.isAlive= TRUE; numAlive +=1; }
-    //    else if (currentCreature.livingNeighbors <=1 || currentCreature.livingNeighbors >=4)
-      //  { currentCreature.isAlive =FALSE; }
-   // }
-//    }
-//}
-  //  _totalAlive = numAlive;
-//}
+       if (currentCreature.livingNeighbors==3) { currentCreature.isAlive= TRUE; numAlive +=1; }
+        else if (currentCreature.livingNeighbors <=1 || currentCreature.livingNeighbors >=4)
+        { currentCreature.isAlive =FALSE; }
+    }
+    }
+}
+    _totalAlive = numAlive;
+}
 @end
 
 
