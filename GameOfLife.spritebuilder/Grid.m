@@ -168,7 +168,7 @@ static const int GRID_COLUMNS = 10;
 //                        }
 //_totalAlive = numAlive;
 //}
--(void)updateCreatures
+- (void)updateCreatures
 
 {_totalAlive=0;
     for (int i = 0; i < [_gridArray count]; i++)
