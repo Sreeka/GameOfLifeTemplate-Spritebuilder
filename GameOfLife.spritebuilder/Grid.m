@@ -120,17 +120,6 @@ static const int GRID_COLUMNS = 10;
                         {
                             currentCreature.livingNeighbors += 1;
                             
-                            
-                            if (currentCreature.livingNeighbors == 3) {
-                                               currentCreature.isAlive = TRUE;
-                                              numAlive++;
-                                        }
-                                      if (currentCreature.livingNeighbors <= 1){
-                                        currentCreature.isAlive = FALSE;
-                                  }
-                                if (currentCreature.livingNeighbors >= 4) {
-                                                                currentCreature.isAlive = FALSE;
-                            }
                         }
                     }
               }
@@ -151,23 +140,7 @@ static const int GRID_COLUMNS = 10;
     }
     return isIndexValid;
 }
-//- (void)updateCreatures
-//
-//{
-//                            if (currentCreature.livingNeighbors == 3) {
-//                                currentCreature.isAlive = TRUE;
-//                                numAlive++;
-//                            }
-//                            if (currentCreature.livingNeighbors <= 1){
-//                                currentCreature.isAlive = FALSE;
-//                            }
-//                            if (currentCreature.livingNeighbors >= 4) {
-//                                currentCreature.isAlive = FALSE;
-//                            }
-//
-//                        }
-//_totalAlive = numAlive;
-//}
+
 - (void)updateCreatures
 
 {_totalAlive=0;
