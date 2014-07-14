@@ -25,7 +25,7 @@
     [self schedule:@selector(step) interval:0.5f];
 }
 
-- (void)pause
+- (void)Pause
 {
     [self unschedule:@selector(step)];
 }
