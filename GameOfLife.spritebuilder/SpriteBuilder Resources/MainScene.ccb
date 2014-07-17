@@ -140,7 +140,7 @@
 				<key>customClass</key>
 				<string></string>
 				<key>displayName</key>
-				<string>CCBFile</string>
+				<string>GridSprite</string>
 				<key>memberVarAssignmentName</key>
 				<string>_grid</string>
 				<key>memberVarAssignmentType</key>
@@ -191,6 +191,8 @@
 						<string>Grid.ccb</string>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -1538,8 +1540,6 @@
 										</array>
 									</dict>
 								</array>
-								<key>selected</key>
-								<true/>
 							</dict>
 							<dict>
 								<key>UUID</key>
@@ -2155,7 +2155,7 @@
 			<key>name</key>
 			<string>Default Timeline</string>
 			<key>offset</key>
-			<real>0.0</real>
+			<real>0.059378623962402344</real>
 			<key>position</key>
 			<real>0.0</real>
 			<key>resolution</key>
